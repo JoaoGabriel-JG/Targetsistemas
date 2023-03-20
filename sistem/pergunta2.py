@@ -6,7 +6,7 @@ fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1
 
 valor = int(input('Insira um número: '))    # Um input com números inteiros pois a Fibonacci não recebe números float
 
-for i, n in enumerate(fibonacci):        # Estrutura de repetição 
+for n in fibonacci:        # Estrutura de repetição 
 
    if valor == n:
       print(f' -> {valor} O valor está dentro da Fibonacci')
