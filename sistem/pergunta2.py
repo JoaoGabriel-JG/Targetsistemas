@@ -9,11 +9,12 @@ valor = int(input('Insira um número: '))    # Um input com números inteiros po
 for i, n in enumerate(fibonacci):        # Estrutura de repetição 
 
    if valor == n:
-      print (' → {}'.format(n), end='')
-      print(' O valor está dentro da Fibonacci')
+      print(f' -> {valor} O valor está dentro da Fibonacci')
       break
+
    elif valor not in fibonacci:
       print(' O valor não pertence a Fibonacci')
       break
+   print (' → {}'.format(n), end='')
   
 # Usei PY pois é minha segunda linguagem e nele da pra colocar inputs
