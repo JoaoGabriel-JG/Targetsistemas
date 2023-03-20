@@ -2,19 +2,23 @@ print ('-' *30)
 print (' ' *3, 'Sequência de Fibonacci')
 print ('-' *30)
 
-fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+fibonacci = [0, 1]
 
-valor = int(input('Insira um número: '))    # Um input com números inteiros pois a Fibonacci não recebe números float
+valor = int(input('Insira um número: '))  # Um input com números inteiros pois a Fibonacci não recebe números float
 
-for n in fibonacci:        # Estrutura de repetição 
 
-   if valor == n:
-      print(f' -> {valor} O valor está dentro da Fibonacci')
-      break
+while valor > int(*fibonacci[-1:]):    # Estrutura de repetição While
+    n1 = fibonacci[-2:][0]
+    n2 = int(*fibonacci[-1:])
 
-   elif valor not in fibonacci:
-      print(' O valor não pertence a Fibonacci')
-      break
-   print (' → {}'.format(n), end='')
-  
+    fibonacci.append(n1 + n2)
+
+    if valor in fibonacci:             # Um if para verificar se é verdadeiro o valor n Fibonacci
+        print([n for n in fibonacci])
+        print(f'O valor {valor} está dentro da Fibonacci')
+        break    
+    elif valor < int(*fibonacci[-1:]):    # Um elif para verificar se é falso o valor n Fibonacci
+        print('O valor não pertence a Fibonacci')
+        break
+
 # Usei PY pois é minha segunda linguagem e nele da pra colocar inputs
