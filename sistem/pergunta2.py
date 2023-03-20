@@ -7,12 +7,13 @@ fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1
 valor = int(input('Insira um número: '))    # Um input com números inteiros pois a Fibonacci não recebe números float
 
 for i, n in enumerate(fibonacci):        # Estrutura de repetição 
-   print (' → {}'.format(n), end='')
 
    if valor == n:
+      print (' → {}'.format(n), end='')
       print(' O valor está dentro da Fibonacci')
       break
-   elif n == fibonacci[-1:]:
-      print('O valor não pertence a Fibonacci')
+   elif valor not in fibonacci:
+      print(' O valor não pertence a Fibonacci')
+      break
   
 # Usei PY pois é minha segunda linguagem e nele da pra colocar inputs
